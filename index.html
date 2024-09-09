@@ -25,14 +25,14 @@
         <!-- gnav -->
         <nav class="gnav" aria-label="グローバルナビゲーション">
           <!-- gnav__list -->
-          <ul class="gnav__list">
+          <ul class="gnav__list vertical-txt">
             <li class="gnav__item"><a href="#news" class="gnav__link">お知らせ</a></li>
             <li class="gnav__item"><a href="#product" class="gnav__link">商品のご紹介</a></li>
             <li class="gnav__item"><a href="#store" class="gnav__link">店舗のご案内</a></li>
           </ul>
         </nav>
         <!-- オンラインストア -->
-        <a href="#online" class="header__link">オンラインストアを見る</a>
+        <a href="#online" class="header__link vertical-txt">オンラインストアを見る</a>
       </div>
     </header>
 
@@ -43,7 +43,7 @@
 
       <!-- お知らせ -->
       <section id="news" class="news sec">
-        <div class="news__inner sec__inner">
+        <div class="news__inner sec__inner vertical-txt">
           <h2 class="news__ttl sec__ttl">
             お知らせ
             <span class="sec__sub-ttl">News</span>
@@ -53,35 +53,30 @@
             <div class="news__item">
               <dt class="news__date">
                 <time datetime="2021-01-01">2021.01.01</time>
-                <span class="news__label">News</span>
               </dt>
               <dd class="news__desc">タイトルタイトルタイトルタイトル</dd>
             </div>
             <div class="news__item">
               <dt class="news__date">
                 <time datetime="2021-01-01">2021.01.01</time>
-                <span class="news__label">Press</span>
               </dt>
               <dd class="news__desc">タイトルタイトルタイトルタイトル</dd>
             </div>
             <div class="news__item">
               <dt class="news__date">
                 <time datetime="2021-01-01">2021.01.01</time>
-                <span class="news__label">News</span>
               </dt>
               <dd class="news__desc">タイトルタイトルタイトルタイトル</dd>
             </div>
             <div class="news__item">
               <dt class="news__date">
                 <time datetime="2021-01-01">2021.01.01</time>
-                <span class="news__label">News</span>
               </dt>
               <dd class="news__desc">タイトルタイトルタイトルタイトル</dd>
             </div>
             <div class="news__item">
               <dt class="news__date">
                 <time datetime="2021-01-01">2021.01.01</time>
-                <span class="news__label">News</span>
               </dt>
               <dd class="news__desc">タイトルタイトルタイトルタイトル</dd>
             </div>
@@ -95,7 +90,7 @@
           <h2 class="hidden">商品のご紹介</h2>
           <!-- 新しい価値の想像 -->
           <section class="product__sub-sec sub-sec">
-            <h3 class="product__sub-sec__ttl sub-sec__ttl">
+            <h3 class="product__sub-sec__ttl sub-sec__ttl vertical-txt">
               新しい価値の想像
               <span class="sub-sec__ttl--eng">Create New Values</span>
             </h3>
@@ -107,7 +102,7 @@
           </section>
           <!-- 科学と技術の調和 -->
           <section class="product__sub-sec sub-sec">
-            <h3 class="product__sub-sec__ttl sub-sec__ttl">
+            <h3 class="product__sub-sec__ttl sub-sec__ttl vertical-txt">
               科学と技術の調和
               <span class="sub-sec__ttl--eng">Science &amp; Technology</span>
             </h3>
@@ -125,14 +120,37 @@
         <div class="store__inner sec__inner">
           <h2 class="store__ttl sec__ttl">店舗のご案内</h2>
           <div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d108356.18194905906!2d131.3543468274135!3d31.93020910328336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1725847211828!5m2!1sja!2sjp" width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6483.3663260188505!2d139.72991124445556!3d35.66017704037603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b9c2ef8e6c3%3A0xff8de5eeddcd1e17!2z44CSMTA2LTAwMzIg5p2x5Lqs6YO95riv5Yy65YWt5pys5pyo77yV5LiB55uu!5e0!3m2!1sja!2sjp!4v1725848220106!5m2!1sja!2sjp" width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <div class="footer__inner"></div>
+      <div class="footer__inner">
+        <div class="vertical-txt">
+          <div class="footer__logo site__logo">
+            <img src="./img/logo.svg" width="40" height="92" alt="創作" class="footer__img" />
+          </div>
+          <address class="footer__address">
+            <p>〒１０６-００３２　東京都港区六本木５丁目×××××</p>
+            <p>電話：０３-ＸＸＸＸ-ＸＸＸＸ</p>
+          </address>
+          <!-- footer-nav__list -->
+          <ul class="footer-nav__list">
+            <li class="footer-nav__item"><a href="#news" class="gnav__link">お知らせ</a></li>
+            <li class="footer-nav__item"><a href="#product" class="footer-nav__link">商品のご紹介</a></li>
+            <li class="footer-nav__item"><a href="#store" class="footer-nav__link">店舗のご案内</a></li>
+          </ul>
+          <!-- footer__link-list -->
+          <ul class="footer__link-list">
+            <li class="link-list__item"><a href="#online" class="footer__link">オンラインストアを見る</a></li>
+            <li class="link-list__item"><a href="#contact" class="footer__link">お問い合わせ</a></li>
+          </ul>
+        </div>
+
+        <small class="footer__copyright">&copy; SOUSAKU</small>
+      </div>
     </footer>
   </body>
 </html>

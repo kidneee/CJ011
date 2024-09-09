@@ -20,7 +20,9 @@
   --line-color: #000;
 
   /* 背景色 */
-  --bg-color: #f0f0f0;
+  --bg-main: #e6e2d7;
+  --bg-footer:  #000;
+
 
   /* ボタンカラー */
   --btn-color: #4b4b4b;
@@ -40,4 +42,24 @@ body {
 
 a {
   color: var(--font-color);
+}
+
+.hidden {
+  display: none;
+}
+
+/* 縦書き */
+.vertical-txt {
+   writing-mode: vertical-rl;
+}
+
+/* main  */
+.main {
+  background: var(--bg-main);
+}
+
+/* footer */
+.footer {
+  background: var(--bg-footer);
+  color: var(--font-white);
 }
