@@ -17,9 +17,9 @@
     <header class="header">
       <div class="header__inner">
         <!-- header__logo -->
-        <h1 class="header__logo">
-          <a href="/" class="header__link">
-            <img src="./img/logo.svg" alt="創作" width="40" height="92" class="header__img" />
+        <h1 class="header-logo">
+          <a href="/" class="header-logo__link">
+            <img src="./img/logo.svg" alt="創作" width="40" height="92" class="header-logo__img" />
           </a>
         </h1>
         <!-- gnav -->
@@ -31,8 +31,10 @@
             <li class="gnav__item"><a href="#store" class="gnav__link">店舗のご案内</a></li>
           </ul>
         </nav>
-        <!-- オンラインストア -->
-        <a href="#online" class="header__link vertical-txt">オンラインストアを見る</a>
+        <!-- オンラインストアリンク -->
+        <div class="header__link--bg">
+          <a href="#online" class="header__link vertical-txt">オンラインストアを見る</a>
+        </div>
       </div>
     </header>
 
@@ -45,8 +47,8 @@
       <section id="news" class="news sec">
         <div class="news__inner sec__inner vertical-txt">
           <h2 class="news__ttl sec__ttl">
+            <span class="sec__ttl--en">News</span>
             お知らせ
-            <span class="sec__sub-ttl">News</span>
           </h2>
           <!-- news__list -->
           <dl class="news__list">
@@ -90,45 +92,51 @@
           <h2 class="hidden">商品のご紹介</h2>
           <!-- 新しい価値の想像 -->
           <section class="product__sub-sec sub-sec">
-            <h3 class="product__sub-sec__ttl sub-sec__ttl vertical-txt">
-              新しい価値の想像
-              <span class="sub-sec__ttl--eng">Create New Values</span>
-            </h3>
-            <p>
-              テキストテキスト<br />
-              テキストテキスト
-            </p>
-            <img src="./img/products1.jpg" alt="" class="sub-sec__img" />
+            <div class="sub-sec__inner sub-sec__inner--reverse">
+              <h3 class="product__sub-sec__ttl sub-sec__ttl vertical-txt">
+                新しい価値の想像
+                <span class="sub-sec__ttl--en">Create New Values</span>
+              </h3>
+              <div class="sub-sec__content">
+                <p class="sub-sec__desc bg-yellow">
+                  テキストテキスト<br />
+                  テキストテキスト
+                </p>
+                <img src="./img/products1.jpg" width="639" height="426" alt="" class="sub-sec__img" />
+              </div>
+            </div>
           </section>
           <!-- 科学と技術の調和 -->
           <section class="product__sub-sec sub-sec">
-            <h3 class="product__sub-sec__ttl sub-sec__ttl vertical-txt">
-              科学と技術の調和
-              <span class="sub-sec__ttl--eng">Science &amp; Technology</span>
-            </h3>
-            <p>
-              テキストテキスト<br />
-              テキストテキスト
-            </p>
-            <img src="./img/products2.jpg" alt="" class="sub-sec__img" />
+            <div class="sub-sec__inner">
+              <h3 class="product__sub-sec__ttl sub-sec__ttl vertical-txt">
+                科学と技術の調和
+                <span class="sub-sec__ttl--en">Science &amp; Technology</span>
+              </h3>
+              <div class="sub-sec__content">
+                <p class="sub-sec__desc bg-red">
+                  テキストテキスト<br />
+                  テキストテキスト
+                </p>
+                <img src="./img/products2.jpg" width="639" height="426" alt="" class="sub-sec__img" />
+              </div>
+            </div>
           </section>
         </div>
       </section>
 
       <!-- 店舗のご案内 -->
       <section id="store" class="store sec">
-        <div class="store__inner sec__inner">
-          <h2 class="store__ttl sec__ttl">店舗のご案内</h2>
-          <div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6483.3663260188505!2d139.72991124445556!3d35.66017704037603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b9c2ef8e6c3%3A0xff8de5eeddcd1e17!2z44CSMTA2LTAwMzIg5p2x5Lqs6YO95riv5Yy65YWt5pys5pyo77yV5LiB55uu!5e0!3m2!1sja!2sjp!4v1725848220106!5m2!1sja!2sjp" width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
+        <h2 class="hidden">店舗のご案内</h2>
+        <div class="gmap">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6483.3663260188505!2d139.72991124445556!3d35.66017704037603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b9c2ef8e6c3%3A0xff8de5eeddcd1e17!2z44CSMTA2LTAwMzIg5p2x5Lqs6YO95riv5Yy65YWt5pys5pyo77yV5LiB55uu!5e0!3m2!1sja!2sjp!4v1725848220106!5m2!1sja!2sjp" width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="gmap_iframe"> </iframe>
         </div>
       </section>
     </main>
 
     <footer class="footer">
       <div class="footer__inner">
-        <div class="vertical-txt">
+        <div class="footer__inner--top vertical-txt">
           <div class="footer__logo site__logo">
             <img src="./img/logo.svg" width="40" height="92" alt="創作" class="footer__img" />
           </div>
@@ -148,7 +156,7 @@
             <li class="link-list__item"><a href="#contact" class="footer__link">お問い合わせ</a></li>
           </ul>
         </div>
-
+        <!-- footer__copyright -->
         <small class="footer__copyright">&copy; SOUSAKU</small>
       </div>
     </footer>

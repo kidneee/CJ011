@@ -10,6 +10,7 @@
   --font-20: 1.25rem; /* 20px */
   --font-24: 1.5rem; /* 24px */
   --font-28: 1.75rem; /* 28px */
+  --font-32: 2rem; /* 32px */
   --font-36: 2.25rem; /* 36px */
 
   /* 文字カラー */
@@ -17,12 +18,14 @@
   --font-white: #fff;
 
   /* ラインカラー */
-  --line-color: #000;
+  --line-black: #000;
+  --line-white: #fff;
 
   /* 背景色 */
   --bg-main: #e6e2d7;
-  --bg-footer:  #000;
-
+  --bg-footer: #000;
+  --bg-yellow: rgba(249, 233, 6, 0.6);
+  --bg-red: rgba(149, 42, 38, 0.6);
 
   /* ボタンカラー */
   --btn-color: #4b4b4b;
@@ -34,9 +37,9 @@
 
 /* 共通 */
 body {
-  font-family: "Noto Serif JP", serif;
+  font-family: 'Noto Serif JP', serif;
   font-optical-sizing: auto;
-  font-style: normal
+  font-style: normal;
   color: var(--font-color);
 }
 
@@ -50,7 +53,85 @@ a {
 
 /* 縦書き */
 .vertical-txt {
-   writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+}
+
+/* セクションタイトル */
+.sec__ttl {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: var(--font-36);
+  font-weight: 400;
+  line-height: 1.11;
+}
+
+/* セクションタイトル英語 */
+.sec__ttl--en {
+  display: block;
+  font-size: var(--font-14);
+  line-height: 1;
+}
+
+/* サブセクションタイトル */
+.sub-sec__ttl {
+  font-size: var(--font-32);
+  line-height: 1.1;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* サブセクションタイトル英語 */
+.sub-sec__ttl--en {
+  font-size: var(--font-14);
+  line-height: 1;
+}
+
+/* コンテンツ幅 */
+.sec__inner {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+/* header */
+.header {
+  width: 100%;
+  color: var(--font-white);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.header__inner {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 60px 80px 30px 40px;
+}
+
+.header-logo {
+  margin-left: 60px;
+}
+
+.gnav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.header__link--bg {
+  background: rgba(255, 255, 255, 0.2);
+  margin-right: auto;
+  padding: 8px;
+}
+
+.header__link {
+  padding: 30px 18px;
+  border: 1px solid var(--line-white);
 }
 
 /* main  */
@@ -58,8 +139,151 @@ a {
   background: var(--bg-main);
 }
 
+.main-visual {
+  position: relative;
+  margin-bottom: 180px;
+}
+
+.main-visual__img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* お知らせ news */
+.news__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  margin-left: auto;
+  margin-bottom: 180px;
+}
+
+.news__list {
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+}
+
+.news__item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 15px 30px;
+  border-right: 1px solid var(--line-black);
+}
+
+.news__item:last-of-type {
+  border-left: 1px solid var(--line-black);
+}
+
+/* 商品のご紹介 product */
+.product__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 280px;
+  margin-bottom: 180px;
+}
+
+.sub-sec__inner {
+  display: flex;
+  gap: 20px;
+}
+
+.sub-sec__inner--reverse {
+  flex-direction: row-reverse;
+}
+
+.sub-sec__content {
+  width: 65%;
+  position: relative;
+  padding-top: 100px;
+}
+
+.sub-sec__desc {
+  font-size: var(--font-16);
+  line-height: 1.4375;
+  color: var(--font-white);
+  padding: 50px 0;
+  position: absolute;
+  text-align: center;
+  width: 56%;
+}
+
+.sub-sec__desc.bg-yellow {
+  background: var(--bg-yellow);
+  left: -20px;
+  bottom: -20px;
+}
+
+.sub-sec__desc.bg-red {
+  background: var(--bg-red);
+  right: -20px;
+  bottom: -20px;
+}
+
+.sub-sec__img {
+  object-fit: contain;
+  height: auto;
+}
+
+/* store */
+.store__inner {
+  width: 100%;
+}
+
+.gmap_iframe {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  height: 450px;
+}
+
 /* footer */
 .footer {
   background: var(--bg-footer);
   color: var(--font-white);
+}
+
+.footer__inner {
+  padding: 80px 80px 30px 30px;
+}
+
+.footer__inner--top {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin-left: auto;
+  margin-bottom: 10px;
+}
+
+.footer__logo {
+  margin-left: 60px;
+}
+
+.footer__address {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-size: var(--font-14);
+}
+
+.footer-nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  font-size: var(--font-16);
+}
+
+.footer__link-list {
+  display: flex;
+  margin-right: auto;
+  gap: 1em;
+  font-size: var(--font-14);
+}
+
+.footer__copyright {
+  display: block;
+  font-size: var(--font-10);
+  text-align: center;
 }
